@@ -1,14 +1,15 @@
-import React, { Component } from 'react';
-import ApolloClient from 'apollo-boost';
-import { ApolloProvider } from 'react-apollo';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import Launches from './components/Launches';
-import Launch from './components/Launch';
-import './App.css';
-import logo from './logo.png';
+import React, { Component } from "react";
+import ApolloClient from "apollo-boost";
+import { ApolloProvider } from "react-apollo";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Launches from "./components/Launches";
+import Launch from "./components/Launch";
+import newRecord from "./components/newRecord";
+import "./App.css";
+import logo from "./logo.png";
 
 const client = new ApolloClient({
-  uri: '/graphql'
+  uri: "/graphql",
 });
 
 class App extends Component {
@@ -20,10 +21,11 @@ class App extends Component {
             <img
               src={logo}
               alt="SpaceX"
-              style={{ width: 300, display: 'block', margin: 'auto' }}
+              style={{ width: 300, display: "block", margin: "auto" }}
             />
             <Route exact path="/" component={Launches} />
             <Route exact path="/launch/:flight_number" component={Launch} />
+            <Route exact path="/newrecord" component={newRecord} />
           </div>
         </Router>
       </ApolloProvider>

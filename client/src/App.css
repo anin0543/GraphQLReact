@@ -1,0 +1,9 @@
+.register-button {
+  float: right;
+  color: #fff;
+  background-color: #555;
+  border-color: #555;
+  font-size: 20px;
+  font-weight: 400;
+  border-radius: 0.25rem;
+}
