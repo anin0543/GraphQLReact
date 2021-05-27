@@ -4,7 +4,7 @@ import { ApolloProvider } from "react-apollo";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Launches from "./components/Launches";
 import Launch from "./components/Launch";
-import newRecord from "./components/newRecord";
+import newRegistration from "./components/newRegistration";
 import "./App.css";
 import logo from "./logo.png";
 
@@ -25,7 +25,7 @@ class App extends Component {
             />
             <Route exact path="/" component={Launches} />
             <Route exact path="/launch/:flight_number" component={Launch} />
-            <Route exact path="/newrecord" component={newRecord} />
+            <Route exact path="/newrecord" component={newRegistration} />
           </div>
         </Router>
       </ApolloProvider>
